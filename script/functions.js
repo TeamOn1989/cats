@@ -10,6 +10,5 @@ function getFormData(elem) {
             formData[element.name] = element.checked        
         }
     });
-    console.log(formData)
     return formData
 }

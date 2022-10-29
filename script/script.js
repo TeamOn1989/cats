@@ -11,6 +11,7 @@ ADD_FORM.addEventListener('click', function(e) {
     const form = document.querySelector('#form_add')
     const inputFormData = [...form];
     const addedCard = getFormData(inputFormData);
+    console.log(addedCard)
     api.addNewCat(addedCard)
         .then(() => {            
             const cardInstance = new Card(addedCard, '#card-template')
