@@ -14,7 +14,7 @@
             <a href="#" class="logo">
                 <i class="fa-solid fa-cat fa-2x logo__img"> Котейки</i>
             </a>
-            <button class="btn">
+            <button class="btn" id="menu-btn">
                 <i class="fa-solid fa-square-caret-down fa-2x"></i> Меню
             </button>
         </div>
@@ -30,25 +30,25 @@
             </div>
             <div class="container intro__content">
                 <div class="form__wrapper closed">
-                    <form class="add__cat">
+                    <form method="post" class="add__cat" id="form_add">
                         <label for="name" class="labels">Введите имя</label>
-                        <input type="text" id="name" class="add__cat__name">
+                        <input type="text" name="name" id="name" class="add__cat__name">
                         <div class="add__cat__like_wrapper">
-                            <input type="checkbox" id="checkbox" class="add__cat__like">
+                            <input type="checkbox" name="favourite" id="checkbox" class="add__cat__like">
                             <label for="checkbox" class="checkbox__label"></label>
                             <span class="check__box__flag">Лобимчик?</span>
                         </div>
                         <label for="raiting" class="labels">Рейтинг</label>
-                        <input type="number" id="raiting" class="add__cat__rate">
+                        <input type="number" name="rate" id="raiting" class="add__cat__rate">
                         <label for="age" class="labels">Возраст кота/кошки</label>
-                        <input type="text" id="age" class="add__cat__age">
-                        <label for="rate" class="labels">Рейтинг:</label>
-                        <input type="text" id="rate" class="add__cat__age">
+                        <input type="text" name="age" id="age" class="add__cat__age">
+                        <label for="rate" class="labels">Номер кота</label>
+                        <input type="text" name="id" id="rate" class="add__cat__age">
                         <label for="descr" class="labels">Опишите Вашего котика</label>
-                        <textarea id="descr" class="add__cat__descr" rows="5">
+                        <textarea id="descr" name="description" class="add__cat__descr" rows="5">
                         </textarea>
                         <label for="img" class="labels">Ссылка на картинку</label>
-                        <input type="text" id="img" class="add__cat__img__link">
+                        <input type="url" name="img_link" id="img" class="add__cat__img__link">
                         <div class="add__btn__wrapper">
                             <button type="submit" class="btn btn--form" id="add">
                                 Добавить
@@ -125,14 +125,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                     <i class="fa-regular fa-star"></i>
-                </button>
-                
+                </button>                
             </div>
         </article>
     </template>
+    
     <script src="./script/cats.js" defer></script>
     <script src="./script/api.js" defer></script>
     <script src="./script/card.js" defer></script>
+    <script src="./script/functions.js" defer></script> 
+    <script src="./script/popup.js" defer></script> 
     <script src="./script/script.js" defer></script>    
 </body>
 </html>

@@ -9,7 +9,6 @@
 @import url("./blocs/social.css");
 @import url("./blocs/intro.css");
 @import url("./blocs/form.css");
-@import url("./blocs/form.css");
 
 @import url("./root/variables.css");
 
@@ -49,3 +48,4 @@ a {
 .closed {
     display: none;
 }
+

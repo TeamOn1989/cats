@@ -118,13 +118,15 @@
     margin-bottom: 3px;
 }
 
-
-
 .add__btn__wrapper {
     display: flex;
     justify-content: space-between;
 }
 
 .btn--form {
+    box-shadow: none;
+}
+
+.btn--form:hover {
     box-shadow: none;
 }

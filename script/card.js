@@ -1,6 +1,6 @@
 class Card {
     constructor(data, selectorTemplate) {
-        this.data = data;
+        this._data = data;
         this.selectorTemplate = selectorTemplate;
     }
 
@@ -14,14 +14,15 @@ class Card {
         const cardImg = this.element.querySelector('.card__img');
         const favourite = this.element.querySelector('.card__like');
         const rating = this.element.querySelector('.card__raiting')
+        cardTitle.textContent = this._data.name;
+        cardImg.src = this._data.img_link;
 
-        if(this.data.favourite === true) {
+        if(this._data.favourite === true) {
             favourite.innerHTML = '<i class="fa-solid fa-heart fa-2x"></i>'
             favourite.style.color = '#ff0000'
         }
 
-        cardTitle.textContent = this.data.name;
-        cardImg.src = this.data.img_link;
+        
         return this.element
     }
 }
