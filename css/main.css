@@ -1,0 +1,51 @@
+
+@import url("./blocs/contaner.css");
+@import url("./blocs/header.css");
+@import url("./blocs/logo.css");
+@import url("./blocs/btn.css");
+@import url("./blocs/variables.css");
+@import url("./blocs/footer.css");
+@import url("./blocs/contacts.css");
+@import url("./blocs/social.css");
+@import url("./blocs/intro.css");
+@import url("./blocs/form.css");
+@import url("./blocs/form.css");
+
+@import url("./root/variables.css");
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.closed {
+    display: none;
+}

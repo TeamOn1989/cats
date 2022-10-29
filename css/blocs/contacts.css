@@ -1,0 +1,17 @@
+.contacts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 5px;
+}
+.contacts__item:first-child {
+    margin-bottom: 10px;
+}
+
+.contacts__heading {
+    font-size: 25px;
+    margin: 0;
+}

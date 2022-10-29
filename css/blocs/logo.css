@@ -1,0 +1,9 @@
+
+
+.logo {
+    display: inline-block;
+}
+
+.logo__img {
+    color: var(--logo-color);
+}

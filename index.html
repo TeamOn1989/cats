@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3ec73217f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-cat fa-2x logo__img"> Котейки</i>
+            </a>
+            <button class="btn">
+                <i class="fa-solid fa-square-caret-down fa-2x"></i> Меню
+            </button>
+        </div>
+    </header>
+    <main>
+
+        <section class="intro">
+            <h1 class="visually-hidden">
+                Список котов
+            </h1>
+            <div class="video">
+                <video src="video/coverr-cat-eating-grass-1749-1080p.mp4" autoplay muted loop class="video__media"></video>
+            </div>
+            <div class="container intro__content">
+                <div class="form__wrapper closed">
+                    <form class="add__cat">
+                        <label for="name" class="labels">Введите имя</label>
+                        <input type="text" id="name" class="add__cat__name">
+                        <div class="add__cat__like_wrapper">
+                            <input type="checkbox" id="checkbox" class="add__cat__like">
+                            <label for="checkbox" class="checkbox__label"></label>
+                            <span class="check__box__flag">Лобимчик?</span>
+                        </div>
+                        <label for="raiting" class="labels">Рейтинг</label>
+                        <input type="number" id="raiting" class="add__cat__rate">
+                        <label for="age" class="labels">Возраст кота/кошки</label>
+                        <input type="text" id="age" class="add__cat__age">
+                        <label for="rate" class="labels">Рейтинг:</label>
+                        <input type="text" id="rate" class="add__cat__age">
+                        <label for="descr" class="labels">Опишите Вашего котика</label>
+                        <textarea id="descr" class="add__cat__descr" rows="5">
+                        </textarea>
+                        <label for="img" class="labels">Ссылка на картинку</label>
+                        <input type="text" id="img" class="add__cat__img__link">
+                        <div class="add__btn__wrapper">
+                            <button type="submit" class="btn btn--form" id="add">
+                                Добавить
+                            </button>
+                            <button class="btn btn--form" id="chancel">
+                                Отмена
+                            </button>
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">        
+        <div class="container footer__container">
+            <div class="social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <i class="fa-brands fa-telegram fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <i class="fa-brands fa-google-plus-g fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="logo">
+                <i class="fa-solid fa-cat fa-2x logo__img"></i>
+            </a>
+            <ul class="contacts">
+                <li class="contacts__item">
+                    <h2 class="contacts__heading">
+                        Наши контакты:
+                    </h2>
+                </li>
+                <li class="contacts__item">
+                    г. Москва, ул. Кошаткинская 15, стр. 201
+                </li>
+                <li class="contacts__item">
+                    <a href="tel:+79996667777" class="contacts__link">
+                        тел: 8 (999) 666-77-77
+                    </a>                    
+                </li>
+                <li class="contacts__item">
+                    <a href="mailto:cats@nodogs.com" class="contacts__link">
+                        e-mail: cats@nodogs.com
+                    </a>                    
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <template id="card-template">
+        <article class="card">
+            <h3 class="card__name"></h3>
+            <img alt="Ваш любимчик" class="card__img">
+            <button class="card__like"><i class="fa-regular fa-heart fa-2x"></i></button>
+            <div class="card__raiting">
+                <h3 class="card__raiting__heading">
+                    рейтинг:
+                </h3>
+                <button class="raitng__btn">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </button>
+                
+            </div>
+        </article>
+    </template>
+    <script src="./script/cats.js" defer></script>
+    <script src="./script/api.js" defer></script>
+    <script src="./script/card.js" defer></script>
+    <script src="./script/script.js" defer></script>    
+</body>
+</html>
