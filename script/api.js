@@ -11,21 +11,22 @@ class Api {
         this._headers = config.header
     }
     getAllCats() {
-        fetch(`${this._url}show`, {
+        return fetch(`${this._url}/show`, {
             method: 'GET'
         })
-    }
-    getAllCats() {
-        fetch(`${this._url}/show`, {
-            method: 'GET'
+        .then((responce) => {
+            return responce.ok ? responce.json() : Promise.reject({...res, message: "Серверная ошибка"})
         })
     }
     
     addNewCat(data) {
-        fetch(`${this._url}/add`, {
+        return fetch(`${this._url}/add`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: this._headers
+        })
+        .then((responce) => {
+            return responce.ok ? responce.json() : Promise.reject({...res, message: "Серверная ошибка"})
         })
     }
 

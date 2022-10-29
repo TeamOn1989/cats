@@ -32,7 +32,7 @@
                 <div class="form__wrapper closed">
                     <form method="post" class="add__cat" id="form_add">
                         <label for="name" class="labels">Введите имя</label>
-                        <input type="text" name="name" id="name" class="add__cat__name">
+                        <input type="text" name="name" id="name" class="add__cat__name" required>
                         <div class="add__cat__like_wrapper">
                             <input type="checkbox" name="favourite" id="checkbox" class="add__cat__like">
                             <label for="checkbox" class="checkbox__label"></label>
@@ -43,7 +43,7 @@
                         <label for="age" class="labels">Возраст кота/кошки</label>
                         <input type="text" name="age" id="age" class="add__cat__age">
                         <label for="rate" class="labels">Номер кота</label>
-                        <input type="text" name="id" id="rate" class="add__cat__age">
+                        <input type="text" name="id" id="rate" class="add__cat__age" required>
                         <label for="descr" class="labels">Опишите Вашего котика</label>
                         <textarea id="descr" name="description" class="add__cat__descr" rows="5">
                         </textarea>
