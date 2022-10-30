@@ -17,6 +17,8 @@ class Popup {
         this.popup.classList.remove('closed')
         if (!this.popup.classList.contains('.closed')) {
             document.addEventListener('keyup', this._escClose)
+            const foter = document.querySelector('.footer')
+            foter.classList.add('closed')
         }
         
     }
@@ -24,11 +26,12 @@ class Popup {
     hidden() {
         this.popup.classList.add('closed')
         document.removeEventListener('keyup', this._escClose)
+        const foter = document.querySelector('.footer')
+        foter.classList.remove('closed')
     }
 
     eventListener() {
         this.popup.addEventListener('click', (e) => {
-            e.preventDefault()
             if (e.target.classList.contains(this._className) || e.target.closest('#chancel')) {
                 this.hidden()
             }

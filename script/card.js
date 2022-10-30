@@ -21,7 +21,6 @@ class Card {
             favourite.innerHTML = '<i class="fa-solid fa-heart fa-2x"></i>'
             favourite.style.color = '#ff0000'
         }
-
         
         return this.element
     }
