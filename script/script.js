@@ -1,10 +1,12 @@
 const catsContainer = document.querySelector('.intro__content')
 const ADD_FORM = document.querySelector('#form_add #add');
 const api = new Api(CONFIG_API)
+const MENU_BTN = document.querySelector('#menu-btn');
+
 
 const popupAddCat = new Popup('form__wrapper');
 popupAddCat.eventListener()
-const addCatBtn = document.querySelector('#menu-btn').addEventListener('click', () => popupAddCat.visible())
+const addCatBtn = document.querySelector('#nav-add-btn').addEventListener('click', () => popupAddCat.visible())
 
 ADD_FORM.addEventListener('click', function(e) {    
     e.preventDefault();
@@ -30,4 +32,3 @@ api.getAllCats()
             catsContainer.append(card)
         });
     })
-        

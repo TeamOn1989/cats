@@ -1,0 +1,26 @@
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 25px;
+}
+
+@media (max-width: 520px) {
+    .nav__list {
+        flex-direction: column-reverse;       
+    }
+
+    .nav__item:not(:first-child) {
+        margin-bottom: 20px;
+    }
+}
+

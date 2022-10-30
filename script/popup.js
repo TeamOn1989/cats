@@ -8,7 +8,6 @@ class Popup {
     _escClose(e) {
         if (e.key === 'Escape') {
             this.hidden()
-            console.log(this)
         }
        
     }
