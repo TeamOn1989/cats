@@ -20,13 +20,13 @@
     }
 
     .nav__item:not(:first-child) {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .header__nav__btn {
         font-size: 10px;
         box-shadow: none;
-        padding: 5px 15px;
+        padding: 10px 15px;
     }
 
     .header__nav__btn:hover {
