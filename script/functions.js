@@ -30,7 +30,6 @@ function checkLocalStorage(apiInstance) {
     } else {
         apiInstance.getAllCats()
             .then(({data}) => {
-                console.log(data)
                 data.forEach(function(catData) {
                     createCatData(catData);
                 })

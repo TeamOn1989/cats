@@ -18,6 +18,8 @@ ADD_FORM.addEventListener('click', function(e) {
     const form = document.querySelector('#form_add')
     const inputFormData = [...form];
     const addedCard = getFormData(inputFormData);
+    let localData = JSON.parse(localStorage.getItem('card'))
+    localData =+ localStorage.setItem('card', JSON.stringify(addedCard))
     api.addNewCat(addedCard)
         .then(() => {            
             createCatData(addedCard)
@@ -33,19 +35,13 @@ AUTH_FORM_BTN.addEventListener('submit', function(e) {
     const authData = getFormData(inputFormDataAuth)
     document.cookie = `email=${authData.email};max-age=3600`
     addCat.classList.remove('closed')
+    checkLocalStorage(api)
     popupLogin.hidden()    
 })
 
 
-api.getAllCats()
-    .then(( {data} ) => {
-        data.forEach(function(catData) {
-            createCatData(catData)
-        });
-    })
 
 
-checkLocalStorage(api)
 
 const addCatBtn = document.querySelector('#nav-add-btn').addEventListener('click', () => popupAddCat.visible())
 const AUTH_BTN = document.querySelector('#login').addEventListener('click', () => popupLogin.visible())
@@ -54,5 +50,5 @@ const isAuth = document.cookie;
 
 if (isAuth) {
     addCat.classList.remove('closed')
-    console.log(isAuth)
+    checkLocalStorage(api)
 }
