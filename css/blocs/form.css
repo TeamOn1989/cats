@@ -29,7 +29,7 @@
     width: 300px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(5, 155, 148);
+    background-color: var(--header-backgound);
     z-index: 1000;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .check__box__flag {
-    color: aliceblue;
+    color:var(--logo-color)
 }
 
 .add__cat__like {
@@ -117,7 +117,7 @@
 }
 
 .labels {
-    color: azure;
+    color: var(--logo-color);
     margin-bottom: 3px;
 }
 

@@ -12,3 +12,29 @@ function getFormData(elem) {
     });
     return formData
 }
+
+function createCatData(catData) {
+    const cardInstance = new Card(catData, '#card-template')
+    const card = cardInstance.getElemet()
+    catsContainer.append(card)
+}
+
+
+function checkLocalStorage(apiInstance) {
+    const localData = JSON.parse(localStorage.getItem('card'))
+
+    if (localData && localData.length) {
+        localData.forEach(function(catData) {
+            createCatData(catData)
+        })
+    } else {
+        apiInstance.getAllCats()
+            .then(({data}) => {
+                console.log(data)
+                data.forEach(function(catData) {
+                    createCatData(catData);
+                })
+                localStorage.setItem('card', JSON.stringify(data))
+            })
+    }
+}

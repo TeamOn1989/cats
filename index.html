@@ -17,12 +17,12 @@
             <nav class="nav header__nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <button class="btn header__nav__btn" id="nav-add-btn">
+                        <button class="btn header__nav__btn closed" id="nav-add-btn">
                             <i class="fa-solid fa-plus"></i> добавить кота
                         </button>
                     </li>
                     <li class="nav__item">
-                        <button class="btn header__nav__btn">
+                        <button class="btn header__nav__btn" id="login">
                             <i class="fa-solid fa-user-plus"></i> войти
                         </button>
                     </li>
@@ -68,6 +68,24 @@
                                 Отмена
                             </button>
                         </div>                        
+                    </form>
+                </div>
+                <div class="form__wrapper form__wrapper_auth  closed">
+                    <h2 class="authorization__heading">
+                        Авторизация
+                    </h2>
+                    <form method="post" class="authorization" id="form_auth">                        
+                        <div class="autorisation__item__wrapper">
+                            <label for="email" class="authorization__labels">Введите логин</label>
+                            <input type="email" name="email" id="email" class="authorization__litem" required placeholder="E-mail">
+                        </div>
+                        <div class="autorisation__item__wrapper">
+                            <label for="password" class="authorization__labels">Введите пароль</label>
+                            <input type="password" name="password" id="password" class="authorization__litem" required placeholder="******">
+                        </div>                           
+                        <button type="submit" class="btn authorization__btn">
+                            Войти
+                        </button>                                         
                     </form>
                 </div>
             </div>
