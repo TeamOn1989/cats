@@ -3,6 +3,8 @@ const ADD_FORM = document.querySelector('#form_add #add');
 const api = new Api(CONFIG_API)
 const AUTH_FORM_BTN = document.querySelector('#form_auth')
 
+const addCat = document.querySelector('#nav-add-btn')
+
 const popupAddCat = new Popup('form__wrapper');
 popupAddCat.eventListener()
 
@@ -25,17 +27,13 @@ ADD_FORM.addEventListener('click', function(e) {
 })
 
 AUTH_FORM_BTN.addEventListener('submit', function(e) {
-    e.preventDefault()
-    const addCat = document.querySelector('#nav-add-btn')
+    e.preventDefault()    
     const auth_form = document.querySelector('#form_auth')
     const inputFormDataAuth = [...auth_form];
     const authData = getFormData(inputFormDataAuth)
     document.cookie = `email=${authData.email};max-age=3600`
-    document.cookie = `password=${authData.password};max-age=3600`
-    console.log(authData)
     addCat.classList.remove('closed')
-    popupLogin.hidden()
-    
+    popupLogin.hidden()    
 })
 
 
@@ -51,3 +49,10 @@ checkLocalStorage(api)
 
 const addCatBtn = document.querySelector('#nav-add-btn').addEventListener('click', () => popupAddCat.visible())
 const AUTH_BTN = document.querySelector('#login').addEventListener('click', () => popupLogin.visible())
+
+const isAuth = document.cookie;
+
+if (isAuth) {
+    addCat.classList.remove('closed')
+    console.log(isAuth)
+}
